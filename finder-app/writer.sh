@@ -8,7 +8,7 @@ fi
 
 # Full path to to a file (including filename)
 writefile=$1
-# test string which will be written to file 
+# Test string which will be written to file 
 writestr=$2
 
 # Specified file name
@@ -28,6 +28,11 @@ fi
 
 # Write string to file
 echo $writestr > $writefile
+
+if [ ! -f $writefile ]; then
+  echo "Failed to write file [$writefile]."
+  exit 1
+fi
 
 exit 0
 

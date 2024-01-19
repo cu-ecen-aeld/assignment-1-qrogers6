@@ -19,7 +19,7 @@ fi
 
 # Number of files in the directory and all subdirectories
 numberOfFiles=$(ls $filesdir | wc -l )
-# 
+# Number of matching lines found in files 
 numberOfLines=$(grep -rnw $filesdir -e $searchstr | wc -l)
 
 echo "The number of files are ${numberOfFiles} and \
